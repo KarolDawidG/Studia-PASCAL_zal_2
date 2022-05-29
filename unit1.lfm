@@ -1,0 +1,59 @@
+object Form1: TForm1
+  Left = 328
+  Height = 432
+  Top = 54
+  Width = 648
+  Caption = 'Form1'
+  ClientHeight = 432
+  ClientWidth = 648
+  LCLVersion = '2.2.0.4'
+  object LosowaLista: TListBox
+    Left = 61
+    Height = 194
+    Top = 94
+    Width = 131
+    ItemHeight = 0
+    OnClick = LosowaListaClick
+    TabOrder = 0
+  end
+  object SortowanaLista: TListBox
+    Left = 440
+    Height = 194
+    Top = 94
+    Width = 131
+    ItemHeight = 0
+    TabOrder = 1
+  end
+  object Losuj: TButton
+    Left = 16
+    Height = 36
+    Top = 312
+    Width = 73
+    Caption = 'Losuj'
+    TabOrder = 2
+  end
+  object Sortuj: TButton
+    Left = 144
+    Height = 36
+    Top = 312
+    Width = 73
+    Caption = 'Sortuj'
+    TabOrder = 3
+  end
+  object Info: TButton
+    Left = 360
+    Height = 36
+    Top = 332
+    Width = 73
+    Caption = 'Info'
+    TabOrder = 4
+  end
+  object Koniec: TButton
+    Left = 472
+    Height = 64
+    Top = 328
+    Width = 112
+    Caption = 'Koniec'
+    TabOrder = 5
+  end
+end
