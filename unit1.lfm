@@ -6,6 +6,7 @@ object Form1: TForm1
   Caption = 'Form1'
   ClientHeight = 432
   ClientWidth = 648
+  OnCreate = FormCreate
   LCLVersion = '2.2.0.4'
   object LosowaLista: TListBox
     Left = 61
@@ -59,12 +60,13 @@ object Form1: TForm1
     OnExit = KoniecClick
     TabOrder = 5
   end
-  object Edit1: TEdit
-    Left = 268
-    Height = 23
-    Top = 132
-    Width = 80
+  object Wyczysc: TButton
+    Left = 16
+    Height = 25
+    Top = 367
+    Width = 74
+    Caption = 'Wyczysc'
+    OnClick = WyczyscClick
     TabOrder = 6
-    Text = 'Edit1'
   end
 end
