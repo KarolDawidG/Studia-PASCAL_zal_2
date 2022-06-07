@@ -6,7 +6,6 @@ object Form1: TForm1
   Caption = 'Form1'
   ClientHeight = 432
   ClientWidth = 648
-  OnCreate = FormCreate
   LCLVersion = '2.2.0.4'
   object LosowaLista: TListBox
     Left = 61
@@ -39,6 +38,7 @@ object Form1: TForm1
     Top = 312
     Width = 73
     Caption = 'Sortuj'
+    OnClick = SortujClick
     TabOrder = 3
   end
   object Info: TButton

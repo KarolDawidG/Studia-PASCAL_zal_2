@@ -19,10 +19,10 @@ type
     Koniec: TButton;
     LosowaLista: TListBox;
     SortowanaLista: TListBox;
-    function FormCreate(Sender: TObject): integer;
     procedure InfoClick(Sender: TObject);
     procedure KoniecClick(Sender: TObject);
     procedure LosujClick(Sender: TObject);
+    procedure SortujClick(Sender: TObject);
     procedure WyczyscClick(Sender: TObject);
   private
   public
@@ -30,6 +30,7 @@ type
 
 var
   Form1: TForm1;
+  arrString : array[1..6] of integer;
 
 implementation
 
@@ -40,24 +41,33 @@ implementation
 
 procedure TForm1.LosujClick(Sender: TObject);
 var
-  arrString : array[1..6] of string;
-  sFor1:string;
+sFor1:integer;
 begin
-    arrString[1] := 'a';
-    arrString[2] := 'b';
-    arrString[3] := 'c';
-    arrString[4] := 'd';
-    arrString[5] := 'e';
-    arrString[6] := 'f';
-
+Randomize;
+     arrString[1] := random(100);
+     arrString[2] := random(100);
+     arrString[3] := random(100);
+     arrString[4] := random(100);
+     arrString[5] := random(100);
+     arrString[6] := random(100);
     For sFor1 in arrString do
-    LosowaLista.Items.Add(sFor1);
+    LosowaLista.Items.Add(IntToStr(sFor1));
+end;
+
+
+
+
+procedure TForm1.SortujClick(Sender: TObject);
+var i : integer;
+begin
+
 
 end;
 
 procedure TForm1.WyczyscClick(Sender: TObject);
 begin
   LosowaLista.clear;
+  SortowanaLista.clear;
 end;
 
 procedure TForm1.InfoClick(Sender: TObject);
@@ -65,19 +75,10 @@ begin
   ShowMessage('Autor programu: Dawid Glinkowski');
 end;
 
-function TForm1.FormCreate(Sender: TObject):integer;
-const
-  numarray : array[1..5] of integer = (1,2,3,4,5);
-var
-  i : integer;
-begin
-  i := numarray[i];
-     FormCreate := i;
-end;
-
 procedure TForm1.KoniecClick(Sender: TObject);
 begin
     close;
+   // MessageDlg('Program zostanie zamkniety. ', mtConfirmation, [mbOK], 0);
 end;
 
 end.
